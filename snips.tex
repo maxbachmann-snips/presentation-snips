@@ -1,0 +1,65 @@
+\documentclass[aspectratio=169]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Madrid}
+  \usecolortheme{default}
+  \usefonttheme{default}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows, fit, calc, shapes, shadows, positioning} % for pgf-umlsd
+\usepackage[underline=true,rounded corners=false]{pgf-umlsd}
+
+\title[Alexa unplugged: AI and Privacy]{Alexa unplugged: AI and Privacy}
+
+\author{Maximilian Bachmann\\}
+
+%\institute{\bf}
+%\textsc { }
+
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\section{Introduction : MQTT}
+
+\begin{frame}{MQTT}
+
+\begin{figure}
+	\centering
+	\begin{sequencediagram}
+		\newthread{client1}{Client 1}
+		\tikzstyle{inststyle}+=[below right=-0.85cm and 3cm of client1]
+		\newthread[gray]{broker}{Broker}
+		\tikzstyle{inststyle}+=[below right=-0.85cm and 3cm of broker]
+		\newthread{client2}{Client}
+
+		\mess{client1}{connect}{broker}
+		\mess{client2}{connect}{broker}
+		\begin{sdblock}{loop}{main loop}
+			\mess{client2}{subscribe: 'topic/'}{broker}
+			\mess{client1}{publish: 'topic/'}{broker}
+			\mess{broker}{publish: 'topic/'}{client2}
+		\end{sdblock}
+		\mess{client1}{disconnect}{broker}
+		\mess{client2}{disconnect}{broker}
+	\end{sequencediagram}
+	
+	\caption{MQTT}
+\end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%
+\end{document}
