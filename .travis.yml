@@ -1,10 +1,16 @@
-install:
- - source ./texlive_install.sh
-cache:
-  directories:
-    - /tmp/texlive
-    - $HOME/.texlive
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 script:
 - mkdir _build
-# Prefix command with travis_wait x so it times out after 3 mins
-- travis_wait 3 pdflatex -output-directory _build ./snips.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build snips.tex
+#deploy:
+#  provider: releases
+#  api_key:
+#    secure: [YOUR KEY]
+#  file:
+#  - _build/snips.pdf
+#  skip_cleanup: true
+#  on:
+#    tags: true
