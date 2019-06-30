@@ -13,9 +13,14 @@ deploy:
     - $GITHUB_API_KEY
   file:
   - _build/snips.pdf
+  name: Alexa unplugged: AI and Privacy
+  body: Automatic snips presentation build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
+  prerelease: false
+  overwrite: true
+  target_commitish: $TRAVIS_COMMIT
   skip_cleanup: true
   on:
-    tags: true
+    branch: master
 env:
   matrix:
     secure: mUvKrVHQRPRWUgVRy2j0vb4eq0eCel51diAxgwqmxaRpwo7chEYsNwD5yDVm4LqAoV9j8oxYdUHC4SO/TZXUjCp+wHBbui+i3qZNji2uhU3/zijNey7FlXg2HBAjnHSPE34+kCWogBmRxhIKACG0Izs4KejM0iTDx3C8zU/SkgywF7/UC+dSL6yjvTCYFm0mbMrSJ1yWqM5+DE0abI23rEXBYNbF78ReMjGSZ/8u9FPnNAfvprLOrZZmcdyhIt9Unqpk89iZsJZS+QTYx1pp6mOX5IksYOxmY/ZUcTtNIqSStHViYod/oYAL3F4gPWs/EckVlVP9+bf153zjTCLxuYq9IV0KAuAADvKQHfa2byMjE3NifQ6KR+gCz8vGH5dBaiHaQv2gS55/z0izKM4zczu6Y/BA4bHijE6EKEMEdH+i/ll1ZmR4kVBbBzYCukssZwkeE4Fa972DQbROOXeerSYkw4uIXX+G1IGsTiff0mH2HMwyymaoqbtzW/spmb6M4zKtewLYKUCNAryVwz/iqLkRFQjvA3Ydg0TH8wQkrQRsDKr7VLdiqwZP/0/yRTqMdGkGwhZJVTp/8dC9XxTsXvX3TnjXLnXYmT7O8JDO45RGAD3asSTrFfvp2XH2VheapnBdZZ8TvTxBqUWCK+1qhTGxmdzerj4NsgA+/u1orpc=
