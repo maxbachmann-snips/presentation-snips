@@ -1,14 +1,12 @@
 sudo: required
 dist: trusty
 install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-beamer
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-beamer
 script:
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build snips.tex
-- travis_wait 3 pdflatex snips.tex
-- travis_wait 3 bibtex snips || true
-- travis_wait 3 pdflatex snips.tex
-- travis_wait 3 pdflatex snips.tex
+  - travis_wait 3 pdflatex snips.tex
+  - travis_wait 3 bibtex snips || true
+  - travis_wait 3 pdflatex snips.tex
+  - travis_wait 3 pdflatex snips.tex
 
 before_deploy:
   - git tag -f travis-latest
@@ -24,7 +22,7 @@ deploy:
   file:
   - snips.pdf
   skip_cleanup: true
-  name: Alexa unplugged: AI and Privacy release
+  name: Alexa unplugged AI and Privacy release
   body: Automatic presentation build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
   prerelease: false
   overwrite: true
