@@ -22,7 +22,7 @@ deploy:
   file:
   - snips.pdf
   skip_cleanup: true
-  name: Alexa unplugged: AI and Privacy release
+  name: Alexa unplugged AI and Privacy release
   body: Automatic presentation build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
   prerelease: false
   overwrite: true
