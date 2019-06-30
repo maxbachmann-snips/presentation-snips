@@ -124,18 +124,52 @@ $\Rightarrow$ Stimme kann kopiert und manipuliert werden, so dass sie imitiert u
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Leistungsbenchmark}
-	\begin{figure}
-		\includegraphics[scale=0.3]{images/benchmark-3}
-	\end{figure}
-\end{frame}
-
 \begin{frame}{Funktionsweise Sprachassistenten}
 	\begin{figure}
 		\includegraphics[scale=0.3]{images/assistant}
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Spracherkennung}
+	\begin{figure}
+		\includegraphics[scale=0.5]{images/spoken-language-understanding}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Leistungsbenchmark}
+	\begin{figure}
+		\includegraphics[scale=0.45]{images/spoken-language-understanding}
+	\end{figure}
+	\begin{itemize}
+		\item Akkustisches Modell wandelt raw Audio in Phonem Warscheinlichkeiten um
+		\item Sprachmodell wandelt diese in Wörter um
+		\item NLU extrahiert strukturierte Daten aus dem gesprochenen Text
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Automatic Speech Recognition Engine}
+	ASR cloud:
+	\begin{itemize}
+		\item Spracherkennung auf Basis von großen deep learning Modellen hat sich in den letzten Jahren stark verbessert
+		\item entsprechende Modelle für menschliche Parität bestehen aus mehreren neuralen Netzwerken mit jeweil mehreren hundert Millionen Parametern, sowie Sprachmodelle aus mehreren Millionen n-grams
+	\end{itemize}
+	$\Rightarrow$ Die Größe der Modelle in Verbindung mit der Echtzeitanforderung machen einen Einsatz auf kleinen Geräte unmöglich
+\end{frame}
+
+\begin{frame}{Automatic Speech Recognition Engine}
+	Ansatz von Snips zur Lösung der Probleme:
+	\begin{itemize}
+		\item Nutzung von Audioaufnahmen aus öffentlichen oder kommerziellen Quellen
+		\item wesentlich kleineres akkustisches Modell
+		\item Spezialisierung des Sprachmodells
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Leistungsbenchmark}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/benchmark-3}
+	\end{figure}
+\end{frame}
 
 \section{MQTT}
 
