@@ -126,7 +126,7 @@ $\Rightarrow$ Stimme kann kopiert und manipuliert werden, so dass sie imitiert u
 
 \begin{frame}{Funktionsweise Sprachassistenten}
 	\begin{figure}
-		\includegraphics[scale=0.3]{images/assistant}
+		\includegraphics[scale=0.22]{images/spoken-language-understanding2}
 	\end{figure}
 \end{frame}
 
@@ -166,6 +166,40 @@ $\Rightarrow$ Stimme kann kopiert und manipuliert werden, so dass sie imitiert u
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Was ist Snips?}
+	\begin{itemize}
+		\item französisches Unternehmen
+		\item keine Sprachaufnahmen werden in die Cloud gestellt
+		\item Läuft vollständig auf eigener Hardware
+		\item Geringe Hardwareanforderungen
+		\item kompatibel mit Linux, Android und iOS
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Hardwareanforderungen}
+	\begin{itemize}
+		\item Raspberry Pi 3 absolut ausreichend
+		\begin{itemize}
+			\item 4x1.2 Ghz
+			\item 1GB Ram
+		\end{itemize}
+	    \item für Satellite Devices sogar Raspberry Pi 0 ausreichend
+	    \begin{itemize}
+	    	\item 1x1 Ghz
+	    	\item 500MB Ram
+	    \end{itemize}
+        \item SD Karte
+        \item Mikrophon
+        \item ggfs ein Lautsprecher
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Modularisierung von Snips}
+	\begin{figure}
+		\includegraphics[scale=0.4]{images/mqtt-snips}
+	\end{figure}
+\end{frame}
+
 \section{MQTT}
 
 \begin{frame}{MQTT}
@@ -192,7 +226,8 @@ $\Rightarrow$ Stimme kann kopiert und manipuliert werden, so dass sie imitiert u
 	
 	\caption{MQTT}
 \end{figure}
-
 \end{frame}
+
+
 %%%%%%%%%%%%%%%
 \end{document}
