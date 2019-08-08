@@ -11,7 +11,7 @@ script:
 before_deploy:
   - git tag -f Toolbox_08_August_2019
   - git remote add gh https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git
-  - git push -f gh travis-latest
+  - git push -f gh Toolbox_08_August_2019
   - git remote remove gh
 
 deploy:
