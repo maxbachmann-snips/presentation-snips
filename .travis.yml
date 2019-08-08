@@ -9,7 +9,7 @@ script:
   - travis_wait 3 pdflatex snips.tex
 
 before_deploy:
-  - git tag -f IWT_02_Juli_2019
+  - git tag -f Toolbox_08_August_2019
   - git remote add gh https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git
   - git push -f gh travis-latest
   - git remote remove gh
