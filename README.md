@@ -1,6 +1,6 @@
 # presentation-snips
 Dieses repository beinhaltet die Präsentation mit dem Thema ``Alexa unplugged: AI and Privacy``. Erstellt wurde die Präsentation mit LaTeX Beamer.
-Die Präsentation travis gebaut und die pdf in den [github releases](https://github.com/maxbachmann-snips/presentation-snips/releases/tag/travis-latest) verfügbar gemacht.
+Die Präsentation travis gebaut und die pdf in den [github releases](https://github.com/maxbachmann/presentation-snips/releases) verfügbar gemacht.
 
 ## Interessante Links
 - [Spoken Language Understanding on the Edge](https://arxiv.org/abs/1810.12735)
